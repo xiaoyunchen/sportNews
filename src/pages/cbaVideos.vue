@@ -60,7 +60,7 @@
         tipText: '上划或点击查看更多',
         isLoad: false,
         isFirstVisit: true,
-        page: 0,
+        page: 1,
         page_size: 10,
         params: {
           length: 10, // 请求的推荐列表长度,取非负整数，默认值为20，最大值为100,规则：offset+length<=100
