@@ -5,8 +5,8 @@
 <template>
   <div class="news-page clearfix">
     <div class="newsList" id="newsBox">
-      <template v-for="(item, index) in newsList" :key="item.docid"><!-- || item.type === 3 -->
-        <div v-if='item.type === 1 || item.type === 2 || item.type === 9'
+      <template v-for="(item, index) in newsList" :key="item.docid">
+        <div v-if='item.type === 1 || item.type === 2 || item.type === 3 || item.type === 9'
              class="news-item" @click='jumpPage(index)'>
           <div class="item-con">
             <div class="news-title">{{item.title}}</div>
@@ -120,7 +120,7 @@
         */
         this.$ajax.get(APIList.recommend, {
             params: Object.assign({
-              type: 2,
+              type: 1,
               offset: this.page * this.page_size,
               timstamp: new Date().getTime(),
             }, this.params)
