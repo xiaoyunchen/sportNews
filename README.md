@@ -4,8 +4,9 @@
 注：
 1、baiduAppSrc: 包含对应的百度小程序代码
 2、wxAppSrc: 包含对应的微信小程序代码
+3、src: vue技术栈项目源码
 
-线上访问地址：https://goodtool666.cn/sportNews
+线上访问地址：https://goodtool666.cn/_spa/sportNews
 
 ## 目录结构
    1. public目录：公共资源和具体业务无关
