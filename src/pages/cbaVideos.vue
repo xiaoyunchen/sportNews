@@ -64,7 +64,7 @@
         page_size: 10,
         params: {
           length: 10, // 请求的推荐列表长度,取非负整数，默认值为20，最大值为100,规则：offset+length<=100
-          pageurl: '',
+          pageurl: 'http://sports.sina.com.cn/basketball/cba/2019-10-28/doc-iicezzrr5464022.shtml',
           cateid: '2L', // 栏目列表
           cre: 'sptapp', // 这两个参数主要用于描述产品位，需要statics=1激活这两个参数
           mod: 'r',
@@ -120,7 +120,6 @@
         */
         this.$ajax.get(APIList.recommend, {
             params: Object.assign({
-              type: 1,
               offset: this.page * this.page_size,
               timstamp: new Date().getTime(),
             }, this.params)
