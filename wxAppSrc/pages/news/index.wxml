@@ -1,0 +1,26 @@
+<view class="newsList">
+	<view wx:for="{{newsList}}" wx:key="{{item.docid}}">
+		<view wx:if='{{item.type === 1 || item.type === 2 || item.type === 3 || item.type === 9}}'
+        class="news-item" data-docid="{{item.docid}}" bindtap='jumpPage'>
+			<view class="item-con">
+				<view class="news-title">{{item.title}}</view>
+				<view class="news-info">
+					<text class="left media-mark">{{item.media || '新浪体育'}}</text>
+					<text wx:if='{{item.type == 2}}' class="picture-mark right">图集</text>
+					<text wx:if='{{item.type == 3}}' class="video-mark right">视频</text>
+					<text wx:if='{{item.comment_count && item.comment_count != 0}}'
+           class="cmt-num right">{{item.agreeDataFormat || item.comment_count || 0 }}评</text>
+				</view>
+			</view>
+			<view class="item-imgbox">
+				<image class="news-img" src="{{item.thumb}}" mode='aspectFill' lazy-load></image>
+			</view>
+		</view>
+	</view>
+	<view class="loadRecommend" wx:if='{{isLoad}}'>
+		<image class="loadding-img" src="https://n.sinaimg.cn/sports/imgStore/appSharePage/loadding.gif" />正在加载中
+	</view>
+    <view class="moreRecommend" wx:else bindtap='onClickBottom'>
+		{{ tipText }}
+	</view>
+</view>

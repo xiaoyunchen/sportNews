@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width,viewport-fit=cover">
+    <title>小猪新闻看点</title>
+    <link rel="shortcut icon" href="https://goodtool666.cn/sportNews/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="小猪新闻看点">
+    <link rel="apple-touch-icon-precomposed" href="https://goodtool666.cn/sportNews/logo.png">
+    <link rel="apple-touch-icon" href="https://goodtool666.cn/sportNews/logo.png">
+    <meta name="description" content="小猪新闻看点为用户提供体育新闻、花边新闻、图集新闻和CBA视频等体育相关新闻、图集、视频新闻">
+    <meta name="keywords" content="小猪新闻看点,体育新闻,体育花边新闻,图集新闻,高清图集,CBA视频">
+    <script type="text/javascript" src="//e2.sinaimg.cn/ssfe/sports/commonUtils/scripts/common/wapCallNative.js?v=20190620.01"></script>
+    <script type="text/javascript">
+      // 判断当前客户端类型
+      var _ua = window.navigator.userAgent.toLowerCase();
+      var _isNews = (/sinanews/i).test(_ua);
+      var _isSports = (/sinasports/i).test(_ua);
+      var WebViewInfo = {
+        ua: _ua,
+        isWeixin: (/micromessenger/i).test(_ua) || typeof navigator.wxuserAgent !== 'undefined',
+        isNews: _isNews,
+        isSports: _isSports,
+        isIOS: (/iphone|ipod|ipad/ig).test(_ua),
+        isAndroid: (/Android/i).test(_ua),
+      };
+      // 判断客户端版本号
+      function checkAppVersion(version) {
+        var ua = window.navigator.userAgent;
+        var reg = /__sinasports__(.+?)\)/i;
+
+        var versionArr = ua.match(reg);
+
+        if (!versionArr) return false;
+
+        var curVersionArr = versionArr[1].split('.');
+        var spportVersionArr = version.split('.');
+
+        var flag = false;
+
+        if (curVersionArr[0] > spportVersionArr[0]
+          || (curVersionArr[0] === spportVersionArr[0] && curVersionArr[1] > spportVersionArr[1])
+          || (curVersionArr[0] === spportVersionArr[0] && curVersionArr[1] === spportVersionArr[1] && (curVersionArr[2] > spportVersionArr[2] || curVersionArr[2] === spportVersionArr[2]))) {
+          flag = true
+        }
+        return flag;
+      }
+      window.WebViewInfo.isNewVersion = checkAppVersion('4.0.0'); // 2019.7.18发版
+    </script>
+    
+    <script type="text/javascript" src="#assetsPublicPath#/scripts/app/flexible.js?v=#version#"></script>
+    <script type="text/javascript">
+      var flexible = window.flexible || window.PAGECTRL.flexible || {};
+      // flexible 初始化
+      flexible.init({
+        designWidth: 750,
+        maxWidth: 414,
+      });
+      flexible.resize(function(info) {
+        // console.log( info );
+      });
+    </script>
+  </head>
+  <body>
+    <noscript style="text-align:center;background:rgba(243,63,51, 0.7);color:#fff;display:block;line-height:42px;font-size: 14px;position:fixed;top:0;left:0;z-index:9999;width:100%;">
+      您的浏览器不支持JavaScript脚本，请您先开启^_^。
+    </noscript>
+    <div id="app"></div>
+    <script type="text/javascript">
+      // 备注：PAGEDATA.Config中的配置数据主要是给APIList.js和PageRouteList.js引用
+      PAGEDATA.Config = {
+        dataApiBase: '#dataApiBase#', // 接口根地址[数据由webpack写入]
+        routeBasePath: '#routeBasePath#',
+      };
+    </script>
+    <script type="text/javascript" src="#assetsPublicPath#/scripts/lib/jquery.11.3.min.js"></script>
+    <script type="text/javascript" src="#assetsPublicPath#/scripts/app/visibility.js"></script>
+    <script type="text/javascript" src="#assetsPublicPath#/scripts/app/bluebird.js"></script>
+  </body>
+</html>

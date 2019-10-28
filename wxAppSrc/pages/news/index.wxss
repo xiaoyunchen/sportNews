@@ -1,0 +1,146 @@
+/**
+ * @file index.css
+ * @author liudan6
+ */
+.newsList {
+    position: relative;
+    padding: 28rpx 20rpx;
+    box-sizing: border-box;
+}
+
+.news-item {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    border-bottom: 1px solid #ececec;
+    margin: 0 20rpx 28rpx;
+    padding: 0 0 28rpx;
+}
+
+.item-con {
+    flex: 1 1 436rpx;
+    padding-right: 20rpx;
+}
+
+.news-title {
+    font-family: PingFangSC-Regular;
+    max-height: 96rpx;
+    font-size: 30rpx;
+    line-height: 48rpx;
+    height: 96rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.news-info {
+    font-family: PingFangSC-Light;
+    height: 28rpx;
+    margin-top: 30rpx;
+    box-sizing: border-box;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.call-app-mark {
+    display: inline-block;
+    margin-right: 8rpx;
+    height: 28rpx;
+    padding: 3rpx 8rpx;
+    text-align: center;
+    font-family: PingFangSC-Light;
+    font-size: 20rpx;
+    color: #405d7f;
+    border: 1px solid #405d7f;
+    border-radius: 4rpx;
+    box-sizing: border-box;
+}
+.media-mark {
+    display: inline-block;
+    height: 28rpx;
+    font-family: PingFangSC-Light;
+    font-size: 24rpx;
+    color: #828282;
+}
+
+.cmt-num,
+.picture-mark,
+.video-mark {
+    display: inline-block;
+    height: 28rpx;
+    font-family: PingFangSC-Light;
+    font-size: 20rpx;
+    padding: 4rpx 8rpx;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cmt-num {
+    height: 28rpx;
+    width: 90rpx;
+    margin-left: 7rpx;
+    color: #828282;
+    background: url(https://n.sinaimg.cn/sports/imgStore/appSharePage/cmt-bk.svg)
+        no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-mark,
+.video-mark {
+    height: 28rpx;
+    width: 64rpx;
+    margin-left: 7rpx;
+    color: #fff;
+    background: url(https://n.sinaimg.cn/sports/imgStore/appSharePage/img-sort-bk.svg)
+        no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-imgbox {
+    flex: 0 0 230rpx;
+    height: 154rpx;
+    text-align: center;
+    overflow: hidden;
+}
+
+.item-imgbox .news-img {
+    width: 100%;
+    height: 100%;
+}
+
+.moreRecommend,
+.loadRecommend {
+    font-family: PingFangSC-Regular;
+    font-size: 26rpx;
+    color: #405d7f;
+    text-align: center;
+    line-height: 35rpx;
+    height: 50rpx;
+    padding-bottom: 15rpx;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadding-img {
+    height: 35rpx;
+    width: 35rpx;
+    margin: 0 8rpx;
+}

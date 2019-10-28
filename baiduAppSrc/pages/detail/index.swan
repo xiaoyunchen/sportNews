@@ -1,0 +1,4 @@
+<!-- detail.swan -->
+<view>
+    <web-view src="{{currentPageSrc}}"></web-view>
+</view>

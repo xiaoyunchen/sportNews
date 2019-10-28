@@ -1,0 +1,43 @@
+{
+    "pages": [
+        "pages/sports/index",
+        "pages/news/index",
+        "pages/photo/index",
+        "pages/detail/index",
+        "pages/video/index"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "小猪新闻看点",
+        "backgroundTextStyle": "light"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/sports/index",
+                "iconPath": "images/tabBar/sports.png",
+                "selectedIconPath": "images/tabBar/sports-active.png",
+                "text": "体育"
+	        },
+            {
+                "pagePath": "pages/news/index",
+                "iconPath": "images/tabBar/news.png",
+                "selectedIconPath": "images/tabBar/news-active.png",
+                "text": "新闻"
+	        },
+            {
+                "pagePath": "pages/photo/index",
+                "iconPath": "images/tabBar/photo.png",
+                "selectedIconPath": "images/tabBar/photo-active.png",
+                "text": "图集"
+	        },
+            {
+                "pagePath": "pages/video/index",
+                "iconPath": "images/tabBar/video.png",
+                "selectedIconPath": "images/tabBar/video-active.png",
+                "text": "视频"
+            }
+        ]
+    }
+}

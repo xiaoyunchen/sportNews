@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html style="font-size:50px">
+<head>
+  <title>小猪新闻看点</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,width=device-width,viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-title" content="小猪新闻看点">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- windows phone 点击无高光 -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="stylesheet" href="//e0.sinaimg.cn/ssfe/sports/youkuVideo/css/base.min.css?v=20190916.1">
+  <script src="//e2.sinaimg.cn/ssfe/sports/youkuVideo/scripts/app/flexible.js"></script>
+  <script>
+    flexible.init({
+      maxWidth: 768,
+    });
+  </script>
+  <link rel="stylesheet" href="//e0.sinaimg.cn/ssfe/sports/youkuVideo/css/cbaVideos.css?v=20190916.1">
+</head>
+<body id="cbaVideos" onselectstart="return false">
+<noscript style="text-align:center;background:rgba(243,63,51,.7);color:#fff;display:block;line-height:42px;font-size:14px;position:fixed;top:0;left:0;z-index:9999;width:100%">
+  您的浏览器不支持JavaScript脚本，请您先开启^_^。
+</noscript>
+<div class="pulltorefresh" id="pullToRefreshBox">
+  <div class="video-list-box" node-type="videoBox" id="videoBox">
+  </div>
+  <div class="moreRecommend" node-type="moreRecommendText" style="display:none">
+    上划或点击查看更多
+  </div>
+  <div class="loadRecommend" node-type="loadRecommendText" style="display:none">
+    <img src="//n.sinaimg.cn/sports/imgStore/appSharePage/loadding.gif">正在加载中
+  </div>
+</div>
+<!-- CBA视频列表展示模板 -->
+<script id="cbaVideoListTempl" type="text/x-dot-template">
+  <<~it:video:index>>
+  <<? it[index-1] && video.playId != it[index-1].playId >>
+  <div class="video-item-box" data-vid="<<=video.playId>>"
+       data-poster="<<= video.thumb>>" data-index="<<= index >>">
+    <div class="video-title"><<=video.title >></div>
+    <div class="video-box" id="<<=video.playId>>">
+      <div class="video-poster">
+        <<? video.thumb>>
+        <img src="<<=video.thumb >>" class="poster" />
+        <<? >>
+        <span class="duration"><<=youYi.videoTimeFormat(video.duration) || ''>></span>
+      </div>
+    </div>
+    <div class="video-desc"><<=video.provider || '小猪新闻看点' >></div>
+  </div>
+  <<?>>
+  <<~>>
+</script>
+</body>
+<script type="text/javascript">
+  var PAGEDATA = {
+    // 项目根地址（静态资源引用根地址）：require-config-v1.0.0.20190916.1-v1.0.0.20190308.3.js 的baseUrl引用此变量
+    projectBase: '//e.sinaimg.cn/ssfe/sports/youkuVideo',
+    clientId: 'fa749d1c1cd03423', // 优酷视频云创建应用的client_id
+  };
+  /*
+     定义API地址清单:APIList,并注入全局变量widow中【备注】
+   */
+  var _protocal = location.protocol;
+  window.APIList = {
+    youkuVideo:  _protocal + '//saga.sports.sina.com.cn/api/video/youku', // 优酷CBA视频清单
+    support: _protocal + '//comment5.news.sina.com.cn/cmnt/vote', // 点赞
+    appSharePageUrl: _protocal + '//interface.sina.cn/sports/client/manage_doc.d.json' // 普通页地址转成分享
+    /*
+      【跟帖支持】
+      内部调用： http://comment5.intra.sina.com.cn/cmnt/vote
+      外部调用： http://comment5.news.sina.com.cn/cmnt/vote
+     */
+  };
+</script>
+<script type="text/javascript" src="//e2.sinaimg.cn/ssfe/sports/youkuVideo/scripts/lib/require.min.js"></script>
+<script type="text/javascript" src="//e2.sinaimg.cn/ssfe/sports/youkuVideo/scripts/config/require-config-v1.0.0.20190916.1.js"></script>
+<script type="text/javascript" src="//e2.sinaimg.cn/ssfe/sports/youkuVideo/scripts/h5/cbaVideos.js?v=20190916.1"></script>
+</html>

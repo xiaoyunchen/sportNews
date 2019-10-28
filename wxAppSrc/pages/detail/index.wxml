@@ -1,0 +1,4 @@
+<!-- detail.wx -->
+<view>
+    <web-view src="{{currentPageSrc}}"></web-view>
+</view>

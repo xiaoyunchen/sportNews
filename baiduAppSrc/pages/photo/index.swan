@@ -1,0 +1,34 @@
+<view class="newsList">
+	<view s-for="{{newsList}}">
+		<view s-if='item.type === 1 || item.type === 2 || item.type === 3 || item.type === 9' class="news-item"
+			data-docid="{{item.docid}}" bindtap='jumpPage'>
+			<view class="news-title">{{item.title}}</view>
+			<view s-if='item.thumbs.length === 1'class='item-imgbox'>
+				<image class="news-img" src="{{item.thumbs[0]}}" mode='aspectFill'
+					lazy-load>
+				</image>
+			</view>
+			<swiper s-else indicator-dots='true' indicator-color="rgba(0,0,0,0.30)" indicator-active-color="#d81e06"
+				autoplay="false" vertical="false" circular="true" current="0" previous-margin="0px" next-margin="0px">
+				<block s-for="thumb in item.thumbs">
+					<swiper-item>
+						<view class='item-imgbox'>
+							<image class="news-img" src="{{thumb}}" mode='aspectFill' lazy-load></image>
+						</view>
+					</swiper-item>
+				</block>
+			</swiper>
+			<view class="news-info">
+				<text class="left media-mark">{{item.media || '新浪体育'}}</text>
+				<text s-if='item.comment_count && item.comment_count != 0' class="cmt-num right">
+					{{item.agreeDataFormat || item.comment_count || 0 }}评</text>
+			</view>
+		</view>
+	</view>
+	<view class="loadRecommend" s-if='isLoad'>
+		<image class="loadding-img" src="https://n.sinaimg.cn/sports/imgStore/appSharePage/loadding.gif" />正在加载中
+	</view>
+	<view class="moreRecommend" s-else bindtap='onClickBottom'>
+		{{ tipText }}
+	</view>
+</view>
