@@ -18,7 +18,7 @@ for (let ind = 0, size = argv.length; ind < size; ind++) {
 
 const configJs = {
   currentEnv: currentEnv,
-  version: '20191028.3', // 项目版本号
+  version: '20191029.1', // 项目版本号
   local: { // 本地开发环境
     dataApiBase: 'http://localhost:8080',
     assetsPublicPath: 'http://localhost:8080',
