@@ -31,7 +31,7 @@ export default {
   .page-wrap {
     position: relative;
     margin: 0 auto;
-    max-width: 414px;
+    max-width: 750px;
     min-width: 320px;
     min-height: 100vh;
     background-color: #f0f0f0;

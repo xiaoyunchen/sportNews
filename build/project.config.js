@@ -18,7 +18,7 @@ for (let ind = 0, size = argv.length; ind < size; ind++) {
 
 const configJs = {
   currentEnv: currentEnv,
-  version: '20191028.1', // 项目版本号
+  version: '20191029.1', // 项目版本号
   local: { // 本地开发环境
     dataApiBase: 'http://localhost:8080',
     assetsPublicPath: 'http://localhost:8080',
@@ -38,7 +38,7 @@ const configJs = {
     host: '49.235.6.237', // 腾讯云服务器ip
     user: 'root',
     password: '123456',
-    port: '21',
+    port: '22',
     localRoot: path.resolve(__dirname, '../dist'),  // 打包后的文件绝对路径（物理路径）,
     remoteRoot: '/_test/_spa/sportNews/', // 上传的ftp路径
     include: ['*', '**/*'],      // this would upload everything except dot files

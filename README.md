@@ -17,9 +17,9 @@
   1. 百度小程序版，打开百度APP，搜索“小猪新闻看点”
      百度小程序体验版：（扫码访问）
      ![百度小程序体验版](https://goodtool666.cn/_spa/baiduApp.png "百度小程序体验版")
-  2. 微信小程序版，目前因项目含有视频类，审核不通过，只有体验版
-     微信小程序体验版：（扫码访问）
-     ![微信小程序体验版](https://goodtool666.cn/_spa/wxApp.png "微信小程序体验版")
+  2. 微信小程序版，
+     微信小程序正式版：（扫码访问）
+     ![微信小程序正式版](https://goodtool666.cn/_spa/wxappCode.png "微信小程序正式版")
   3. 对应的H5版小猪新闻看点：https://goodtool666.cn/_spa/sportNews
 
 ## 项目开发时间

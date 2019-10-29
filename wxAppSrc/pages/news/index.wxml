@@ -1,6 +1,6 @@
 <view class="newsList">
-	<view wx:for="{{newsList}}" wx:key="{{item.docid}}">
-		<view wx:if='{{item.type === 1 || item.type === 2 || item.type === 3 || item.type === 9}}'
+	<view wx:for="{{newsList}}" wx:key="{{item.docid}}"><!-- || item.type === 3 -->
+		<view wx:if='{{item.type === 1 || item.type === 3 || item.type === 2 || item.type === 9}}'
         class="news-item" data-docid="{{item.docid}}" bindtap='jumpPage'>
 			<view class="item-con">
 				<view class="news-title">{{item.title}}</view>

@@ -13,9 +13,9 @@ Page({
         isLoad: false,
         isFirstVisit: true,
         page: 0,
-        page_size: 10,
+        page_size: 15,
         params: {
-            length: 10, // 请求的推荐列表长度,取非负整数，默认值为20，最大值为100,规则：offset+length<=100
+            length: 15, // 请求的推荐列表长度,取非负整数，默认值为20，最大值为100,规则：offset+length<=100
             pageurl: '',
             cateid: '2L', // 栏目列表
             cre: 'sptapp', // 这两个参数主要用于描述产品位，需要statics=1激活这两个参数
@@ -95,7 +95,12 @@ Page({
                     var item = dataList[ind];
                     if (this.data.docidList.toString().indexOf(item.docid) < 0) {
                         item.agreeDataFormat = this.agreeDataFormat(item.comment_count);
-                        newsDataList.push(item);
+                        var beginTime = new Date('2019.10.29 13:15').getTime() + 3*60*60*1000;
+                        var nowTime = new Date().getTime();
+                        // 当前三小时内过滤视频相关新闻
+                        if ((item.type !== 3 || nowTime >= beginTime)) {
+                          newsDataList.push(item);
+                        }
                         newdocidList.push(item.docid);
                         this.data.newsListObj[item.docid] = item;
                     }

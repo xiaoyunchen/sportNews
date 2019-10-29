@@ -49,14 +49,14 @@ const jumpPageMixin = {
          app_type	客户端类型	110-新闻app，111-财经app，112-体育app
         */
       if (pageType === 1 || pageType === 9) {
-        currentPageSrc = 'https://goodtool666.cn/_sportnews/wb/hotspot_news.d.html?docid=' + pageId;
+        currentPageSrc = 'https://goodtool666.cn/_sportnews/wb/pigsee_news.d.html?docid=' + pageId; // hotspot/mid
       } else if (pageType === 2) {
         if (slideid) {
           pageId = slideid.replace('slide:', '').replace(/-/g, '_');
         }
-        currentPageSrc = 'https://goodtool666.cn/_sportnews/wb/hotspot_slide.d.html?docid=' + pageId;
+        currentPageSrc = 'https://goodtool666.cn/_sportnews/wb/pigsee_slide.d.html?docid=' + pageId;
       } else if (pageType === 3) {
-        currentPageSrc = 'https://goodtool666.cn/_sportnews/wb/hotspot_video.d.html?docid=' + pageId;
+        currentPageSrc = 'https://goodtool666.cn/_sportnews/wb/pigsee_video.d.html?docid=' + pageId;
       } else {
         // 其他新闻类型，通过接口转换成中间页
         ths.$ajax.get(APIList.appSharePageUrl, {

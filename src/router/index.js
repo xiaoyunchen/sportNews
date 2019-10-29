@@ -8,6 +8,7 @@ const SportsPage = () => import('$pages/sports');
 const NewsPage = () => import('$pages/news');
 const PhotosPage = () => import('$pages/photos');
 const VideosPage = () => import('$pages/videos');
+const CBANewsPage = () => import('$pages/cbaNews');
 const CBAVideosPage = () => import('$pages/cbaVideos');
 
 export default new Router({
@@ -41,6 +42,16 @@ export default new Router({
     },
     {
       path: pageRouterList.cbaVideos,
+      name: 'cbaVideos',
+      component: CBAVideosPage
+    },
+    {
+      path: pageRouterList.cbaNews,
+      name: 'cbaNews',
+      component: CBANewsPage
+    },
+    {
+      path: '/cbaVideos.html',
       name: 'cbaVideos',
       component: CBAVideosPage
     },
